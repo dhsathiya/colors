@@ -1,0 +1,447 @@
+	@import url('https://fonts.googleapis.com/css?family=Bangers');
+html,
+body {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.colorlist {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	height: 80%;
+	width: 90%;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	border: 10px solid #121921;
+	box-shadow: 0px 0px 40px #121921;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+}
+
+.color {
+	width: 11.11%;
+	height: 100%;
+	font-family: monospace;
+	-webkit-box-shadow: 2px 2px 20px black;
+	box-shadow: 2px 2px 20px black;
+	text-align: left;
+}
+	
+.color:hover {
+	z-index: 10;
+	width: 15%;
+	-webkit-box-shadow: 3px 3px 30px black;
+	box-shadow: 3px 3px 30px black;
+	font-size: 18px;
+}
+
+
+
+/*Front Modal*/
+
+.frontmodalbutton {
+	position: unset !important;
+	text-shadow: 0px 3px 0px yellow, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+	font-size: 30px !important;
+	border-width: 4px !important;
+}
+
+
+/*Buttons !!*/
+
+.buttonholder {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 30px;
+	width: 110px;
+	margin-right: 20px;
+	margin-bottom: 25px;
+	z-index: 13;
+}
+
+.likediv {
+	position: relative;
+	z-index: 11 !important;
+	background-color: transparent;
+	height: 30px;
+	width: 30px;
+	float: right;
+	border-radius: 2px;
+	-webkit-box-shadow: 2px 2px 10px black;
+	box-shadow: 2px 2px 10px black;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.likediv:hover {
+	opacity: 0.7
+}
+
+.thumb {
+	font-size: 22px;
+	color: black;
+	left: 15%;
+	top: 15%;
+	position: absolute;
+}
+
+.colorclean {
+	display: none
+}
+
+.refreshdiv {
+	position: relative;
+	z-index: 11 !important;
+	background-color: transparent;
+	height: 30px;
+	width: 30px;
+	border-radius: 2px;
+	float: left;
+	-webkit-box-shadow: 2px 2px 10px black;
+	box-shadow: 2px 2px 10px black;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.refreshdiv:hover {
+	opacity: 0.7
+}
+
+.refresh {
+	font-size: 22px;
+	color: black;
+	left: 12%;
+	top: 15%;
+	position: absolute;
+}
+
+.copydiv {
+	position: relative;
+	z-index: 11 !important;
+	background-color: transparent;
+	height: 30px;
+	width: 30px;
+	border-radius: 2px;
+	-webkit-box-shadow: 2px 2px 10px black;
+	box-shadow: 2px 2px 10px black;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	opacity: 0.5;
+	margin-left: 10px;
+}
+
+.copydiv:hover {
+	opacity: 0.7
+}
+
+.copyicon {
+	font-size: 22px;
+	color: black;
+	left: 17%;
+	top: 15%;
+	position: absolute;
+}
+
+
+/*TOOL TIP*/
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 130%;
+	left: -94%;
+	margin-left: -60px;
+	opacity: 0;
+	-webkit-transition: opacity 0.8s;
+	-o-transition: opacity 0.8s;
+	transition: opacity 0.8s;
+}
+
+.tooltip .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	right: 10%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+	opacity: 0.7;
+}
+
+
+/*FOOTER*/
+
+.link {
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.footer {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	opacity: 0.4;
+	z-index: 11;
+	height: 10px;
+	font-family: Bangers, sans-serif;
+}
+
+.footer:hover {
+	opacity: 0.7;
+}
+
+
+/*MODAL*/
+
+.modalcontainer {
+	background-color: transparent;
+	position: fixed;
+	z-index: 12;
+	width: 100%;
+	font-family: Bangers, sans-serif;
+	color: #121921;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.framer {
+	position: absolute;
+	padding: 20px;
+	display: inline-block;
+	position: relative;
+	font-size: 40px;
+	text-shadow: 0px 3px 0px yellow, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modalinput {
+	height: 40px;
+	width: 100%;
+	top: -20px;
+	position: relative;
+	background-color: transparent;
+	border: none;
+	border-bottom: 3px solid #121921;
+	font-size: 26px;
+	text-align: center;
+	outline: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding: 10px;
+	color: #121921;
+	font-family: Bangers, sans-serif;
+	text-shadow: 0px 3px 0px yellow, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1)
+}
+
+.modalinput::-webkit-input-placeholder {
+	color: #121921;
+	font-size: 26px;
+	font-family: Bangers, sans-serif;
+}
+
+.modalinput:-ms-input-placeholder {
+	color: #121921;
+	font-size: 26px;
+	font-family: Bangers, sans-serif;
+}
+
+.modalinput::-ms-input-placeholder {
+	color: #121921;
+	font-size: 26px;
+	font-family: Bangers, sans-serif;
+}
+
+.modalinput::placeholder {
+	color: #121921;
+	font-size: 26px;
+	font-family: Bangers, sans-serif;
+}
+
+.modalbutton {
+	position: relative;
+	top: 20px;
+	background-color: transparent;
+	font-size: 26px;
+	padding: 10px 20px;
+	border: 2px solid #121921;
+	outline: none;
+	cursor: pointer;
+	color: #121921;
+	font-family: Bangers, sans-serif;
+}
+
+.closemodal {
+	position: relative;
+	top: -140px;
+	right: -100px;
+	float: right;
+	cursor: pointer;
+	padding: 3px 10px;
+	border: 2px solid #121921;
+	color: #121921;
+	text-shadow: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	.color {
+		width: 100vw;
+		height: 11.11%;
+		font-size: 2vw;
+	}
+	.color:hover {
+		width: 100%;
+		height: 15%;
+		z-index: 10;
+		font-size: 3vw;
+	}
+	.colorlist {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		border:none;
+	}
+	.footer {
+		width: 27vh;
+		font-size: 2vh;
+		top: 50%;
+		bottom: none;
+		right: -22vw;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+	.buttonholder {
+		height: 50px;
+		width: 180px;
+	}
+	.likediv,
+	.refreshdiv,
+	.copydiv {
+		height: 50px;
+		width: 50px;
+	}
+	.copydiv {
+		margin-left: 15px;
+	}
+	.thumb,
+	.refresh,
+	.copyicon {
+		top: 11%;
+		font-size: 40px;
+	}
+	.tooltip .tooltiptext {
+		width: 180px;
+		bottom: 130%;
+		left: -145%;
+		margin-left: -60px;
+		opacity: 0;
+		font-size: 20px;
+	}
+	.tooltip .tooltiptext::after {
+		top: 100%;
+		right: 10%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: black transparent transparent transparent;
+	}
+	.framer {
+		font-size: 6vw;
+		text-shadow: 0px 3px 0px #121921, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+	}
+	.modalcontainer {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.modalcontainer,
+	.closemodal,
+	.modalbutton,
+	.modalinput,
+	.frontmodalbutton,
+	.modalinput::placeholder {
+		color: white;
+		font-size: 4vw !important;
+	}
+	.modalbutton,
+	.frontmodalbutton {
+		border: 4px solid white;
+		text-shadow: 0px 3px 0px #121921, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+	}
+	.modalinput {
+		border-bottom: 4px solid white;
+		color: white;
+		margin-top: 60px;
+		font-size: 4vw;
+	}
+	.closemodal {
+		position: fixed;
+		top: -1;
+		right: 0;
+		padding: 4px 16px;
+		border: 4px solid white;
+		font-size: 6vw;
+	}
+}
+
+
+/*AutoFill Remover*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-animation: autofill 0s forwards;
+	animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+	100% {
+		background: transparent;
+		color: inherit;
+	}
+}
+
+@-webkit-keyframes autofill {
+	100% {
+		background: transparent;
+		color: inherit;
+	}
+}

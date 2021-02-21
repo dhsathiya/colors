@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="js.js"></script>
+		<script src="shake.js"></script>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="custom.css">
+		<link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
+	</head>
+	
+	<body style="display: flex;">
+
+
+
+			<div style="z-index: 15" class="modalcontainer" id="frontmodalcontainer">
+				<div class="framer" id="frontframer">	
+					<center>
+						<h2 style="margin: 0">Hey !</h2>
+						<span>Good to see you here</span><br/><br/>
+						<h5 style="margin: 0;font-weight: normal;">I wrote this around 2019 but it still works!</h5>
+						<h5 style="margin: 0;font-weight: normal;">If you like this follow me on IG: <a style="color: inherit;" href="https://instagram.com/d.vlpr"> @d.vlpr </a></h5><br/>
+						<span>press &nbsp;<button onclick="closefrontmodal()" class="modalbutton frontmodalbutton">this button</button> &nbsp;or "Spacebar" to start</span>
+						<br>
+						<span>Spacebar or shake to refresh</span>
+						<!-- <button class="modalbutton" type="submit">Thumbs up</button> -->
+					</center>
+				</div>	
+			</div>
+
+		<div style="width: 100%">			
+			<div class="optionslabel" style="display: none">
+					<input type="number" id="numcolornum" min="2" max="128" value="9">
+			</div>			
+			<div id="colorlist" class="colorlist"></div>	
+		</div>	
+
+		<div class="buttonholder">
+			<button class="refreshdiv tooltip" onclick="test()"><i class ="fas fa-sync-alt refresh"></i>
+				<span class="tooltiptext">New Palette</span></button>
+			<!-- <button class="instagramdiv tooltip" onclick="displayinstamodal(),hidemodal()"><i class="fab fa-instagram instagramicon"></i>
+				<span class="tooltiptext">Instagram @d.vlpr</span></button>
+			<button class="likediv tooltip" onclick="displaymodal(),hideinstamodal()"><i class="far fa-thumbs-up thumb"></i>
+				<span class="tooltiptext">Like this palette</span></button>-->		
+			<button class="copydiv tooltip" onclick="copyToClipboard(document.getElementById('instacolorclean').value)"><i class="far fa-copy copyicon"></i>
+				<span class="tooltiptext">Copy Palette</span></button>
+			 <button class="likediv tooltip" onclick="window.location='https://instagram.com/d.vlpr'"><i class="fab fa-instagram instagramicon"></i>
+				<span class="tooltiptext">Follow on IG</span></button>
+
+			 </div>
+
+		<span class="footer">
+			<span>Created by <a class="link" target="_blank" href="https://h4ck3r.in">Devarshi Sathiya</a> | </span>
+			<span><a class="link" target="_blank" href="https://github.com/dhsathiya/colors">GitHub</a></span>
+			<br>
+		</span>	
+
+		<script type="text/javascript">
+			var stopper = setInterval(stopperfunc, 1000);
+			function stopperfunc() {
+    			test()
+			}
+
+			document.body.onkeyup = function(e){
+				var x=0;
+			  	if(e.keyCode == 32){
+			        if(x==0){
+			        	document.getElementById("frontmodalcontainer").style.display = "none";
+			        	x++;
+			        	clearInterval(stopper);
+			        }
+			        test()
+			    }
+			}
+
+			/*SHAKER*/
+			var myShakeEvent = new Shake({
+			    threshold: 15, // optional shake strength threshold
+			    timeout: 1000 // optional, determines the frequency of event generation
+			});
+
+			myShakeEvent.start();
+
+			window.addEventListener('shake', shakeEventDidOccur, false);
+
+			//function to call when shake occurs
+			function shakeEventDidOccur () {
+			    test()
+			}
+
+		</script>
+	</body>
+</html>
